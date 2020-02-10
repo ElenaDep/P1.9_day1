@@ -5,6 +5,8 @@ from math import *
 if len(sys.argv) == 1 :
 	print("Usage: insert a number as argument to select which function you want to use\n")
 	print("- 1 for f(x)=x\n")
+	print("- 2 for f(x)=exp(x)\n")
+	print("- 3 for f(x)=sqrt(|x|)\n")
 
 else:
 
