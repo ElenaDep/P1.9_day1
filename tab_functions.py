@@ -16,7 +16,7 @@ else:
 	def polynomial(xlist, n):
 		return [ x**n for x in xlist ]
 	
-	xval = [n*1.0 for n in range(-5,6,1)]
+	xval = [n*1.0 for n in range(-3,4,1)]
 
 	func_num = int(sys.argv[1])
 	if func_num == 1:
