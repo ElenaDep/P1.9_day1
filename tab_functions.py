@@ -10,6 +10,8 @@ if len(sys.argv) == 1 :
 	print("- 4 for f(x)=sin(x)\n")
 	print("- 5 for f(x)=cos(x)\n")
 	print("- 6 for f(x)=tang(x)\n")
+	print("- 7 for f(x)=exp(x)\n")
+	print("- 8 for f(x)=sqrt(|x|)\n")
 
 else:
 
@@ -27,6 +29,13 @@ else:
 
 	def trig_t(xlist):
 		return [ tan(x) for x in xlist ]
+	
+	def irrat_e(xlist):
+		return [ exp(x) for x in xlist ]
+
+	def irrat_s(xlist):
+		return [ sqrt(abs(x)) for x in xlist ]
+
 
 	xval = [n*1.0 for n in range(-3,4,1)]
 
@@ -37,7 +46,7 @@ else:
 	if func_num == 2 or func_num == 3:
 		yval=polynomial( xval, func_num)
 	
-	if func_num ==4:
+	if func_num == 4:
 		yval=trig_s(xval)
 
 	if func_num == 5:
@@ -45,6 +54,13 @@ else:
 
 	if func_num == 6:
 		yval=trig_t(xval)
+
+	if func_num == 7:
+		yval=irrat_e(xval)
+
+	if func_num == 8:
+		yval=irrat_s(xval)
+
 
 	import matplotlib.pyplot as plt
 	plt.plot(yval)
